@@ -3,7 +3,7 @@
 %define SPECNAME smartmet-engine-%{DIRNAME}
 Summary: SmartMet Translation Engine
 Name: %{SPECNAME}
-Version: 23.8.9
+Version: 23.8.23
 Release: 1%{?dist}.fmi
 License: FMI
 Group: SmartMet/Engines
@@ -29,7 +29,7 @@ BuildRequires: libatomic
 BuildRequires: make
 BuildRequires: rpm-build
 BuildRequires: smartmet-library-macgyver-devel >= 23.7.28
-BuildRequires: smartmet-library-spine-devel >= 23.8.8
+BuildRequires: smartmet-library-spine-devel >= 23.8.23
 BuildRequires: smartmet-library-timeseries-devel >= 23.7.28
 BuildRequires: sqlite3pp-devel >= 1.0.9
 BuildRequires: curl-devel >= 7.61.0
@@ -45,7 +45,7 @@ Requires: fmt >= %{smartmet_fmt_min}, fmt < %{smartmet_fmt_max}
 Requires: gdal35-libs
 Requires: libatomic
 Requires: smartmet-library-macgyver >= 23.7.28
-Requires: smartmet-library-spine >= 23.8.8
+Requires: smartmet-library-spine >= 23.8.23
 Requires: smartmet-library-timeseries >= 23.7.28
 Requires: smartmet-server >= 23.7.28
 Requires: unixODBC
@@ -156,3 +156,6 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Aug 14 2023 Anssi Reponen <anssi.reponen@fmi.fi> - 23.8.14-1.fmi
 - Initial version 
+
+* Wed Aug 23 2023 Anssi Reponen <anssi.reponen@fmi.fi> - 23.8.23-1.fmi
+- Start using Translations-api from spine
